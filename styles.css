@@ -1,0 +1,64 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Cairo', sans-serif;
+    background-color: #f2eecb;
+  }
+  
+  .banner {
+    background-image: url('images/banner.png');
+    background-size: cover;
+    background-position: center;
+    height: 30vh; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative; /* Ensures stacking context */
+    overflow: hidden; 
+  }
+  
+  .site-name, .site-name-ar {
+    font-size: 2em;
+    color: white;
+    position: relative; 
+    z-index: 10; 
+    text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000; 
+}
+  
+  .icon {
+    background-image: url('images/icon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%; /* Circular crop */
+    border: 2px solid black; /* Border outline */
+    box-shadow: 0px 0px 10px #000; /* Shadow for depth */
+    z-index: 5; /* Ensures icon is above the banner but below the text */
+    transition: transform 0.3s ease; /* Smooth transition for the transform property */
+}
+
+.icon:hover {
+  transform: translate(-50%, -50%) scale(1.2); /* Enlarges the icon to 120% of its size */
+}
+  
+  .coming-soon {
+    text-align: center;
+    font-size: 4em; /* Increased font size */
+    margin-top: 50px; /* Adjust to bring the text up, overlapping the bottom edge of the banner */
+    color: black;
+    z-index: 10; /* Ensures text is above other elements */
+    position: relative; /* Ensures text is placed above the banner image */
+  }
+  
