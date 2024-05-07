@@ -1,0 +1,25 @@
+import pandas as pd
+import json
+
+# Read the Excel file with UTF-8 encoding
+xlsx_file = './psychiatrist.xlsx'
+xlsx = pd.ExcelFile(xlsx_file)
+
+# Convert each sheet to JSON
+json_data = {}
+for sheet_name in xlsx.sheet_names:
+    # Read the sheet into a DataFrame with UTF-8 encoding
+    df = pd.read_excel(xlsx, sheet_name=sheet_name)
+    
+    # Replace NaN values with an empty string
+    df = df.fillna('')
+    
+    # Convert the DataFrame to JSON
+    json_data[sheet_name] = df.to_dict(orient='records')
+
+# Save the JSON data to a file with UTF-8 encoding
+json_file = './data.json'
+with open(json_file, 'w', encoding='utf-8') as f:
+    json.dump(json_data, f, ensure_ascii=False)
+
+print('Conversion completed successfully.')
