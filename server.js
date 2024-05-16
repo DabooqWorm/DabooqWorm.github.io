@@ -11,7 +11,7 @@ $(document).ready(function() {
         // Create table structure
         var $centerDiv = $('<div>', {class: 'center'});
         var $tableDiv = $('<div>');
-        var $table = $('<table>', {id: 'infoTable'});
+        var $table = $('<table class="table-ar">', {id: 'infoTable'});
         var $thead = $('<thead>', {id: 'tableHead'});
         var $tbody = $('<tbody>', {id: 'tableBody'});
         $table.append($thead, $tbody);
