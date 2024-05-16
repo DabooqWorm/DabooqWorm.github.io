@@ -48,12 +48,24 @@ body, html {
     color: black;
   }
 
-  table {
+  .table-ar {
     border-collapse: collapse;
     width: 90%;
     margin: 0 auto;
     text-align: right;
     table-layout: fixed;
+  }
+  .table-en {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+    table-layout: fixed;
+  }
+
+  .table-en img {
+    max-width: 100px;
+    max-height: 100px;
   }
   
   table tr {
